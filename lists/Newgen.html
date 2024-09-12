@@ -1,34 +1,86 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Kittyhook | New-Gen">
-    <meta property="og:description" content="A list of New-gen Vrchat Players| Kittyhook, The best source/hub of info for VRChat!">
+    <meta property="og:description" content="A list of New-gen VRChat Players | Kittyhook, the best source/hub of info for VRChat!">
     <title>Kittyhook | New-Gen</title>
     <link rel="stylesheet" href="../stylenscript/styles.css">
-    <script src="../stylenscript/script.js" defer=""></script>
-		        <link
-            rel="icon"
-            href=
-"../icons/icon-1.png"
-            type="image/x-icon"
-        />
+    <script src="../stylenscript/script.js" defer></script>
+    <link rel="icon" href="../icons/icon-1.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a.active {
+            background-color: #4CAF50;
+        }
+        .container {
+            padding: 20px;
+        }
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .user-list li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .user-list li:last-child {
+            border-bottom: none;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .dev-tag {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
-<div class="topnav">
-    <a class="active" href="../index.html">Home</a>
-    <a href="../lists/oldandnewgen.html">Users</a>
-    <a href="../lists/gangs.html">Gangs</a> 
-    <a href="../clients/clients.html">Clients</a>
-    <a href="../websites and assets/websites.html">Websites</a>
-    <a href="../credits.html">Credits</a>
-  </div>
 <body>
+    <div class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="../lists/oldandnewgen.html">Users</a>
+        <a href="../lists/gangs.html">Gangs</a>
+        <a href="../clients/clients.html">Clients</a>
+        <a href="../websites and assets/websites.html">Websites</a>
+        <a href="../credits.html">Credits</a>
+    </div>
     <div class="container">
         <h1 class="rgb-effect">NEW-GENS</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a user...">
+        </div>
         <div id="user-list" class="user-list">
-            <ul id="user-list">
-			
+            <ul>
+                <!-- List items here -->
                 <li>larp</li>
+                <li>blooodpool1234</li>
+                <li>112</li>
                 <li>krampus</li>
                 <li>ogpandabar</li>
                 <li>g59 bandit</li>
@@ -88,21 +140,22 @@
                 <li>mr. cross</li>
                 <li>Cͨhͪoͦoͦgeͤrͬ</li>
                 <li>Rumple</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
                 <li>Credits: salute, Vamp</li>
-                <li></li>
             </ul>
-
         </div>
     </div>
     <div class="dev-tag">.gg/skeetvrc</div>
 
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const items = document.querySelectorAll('#user-list li');
 
-</body></html>
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
