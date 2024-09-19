@@ -8,7 +8,6 @@
     <meta property="og:description" content="A list of New-gen VRChat Players | Kittyhook, the best source/hub of info for VRChat!">
     <title>Kittyhook | New-Gen</title>
     <link rel="stylesheet" href="../stylenscript/styles.css">
-    <script src="../stylenscript/script.js" defer></script>
     <link rel="icon" href="../icons/icon-1.png" type="image/x-icon">
     <style>
         body {
@@ -44,6 +43,24 @@
             padding: 10px;
             background-color: #f4f4f4;
         }
+        .topnav {
+            display: flex;
+            background-color: #333;
+        }
+        .topnav a {
+            padding: 14px 16px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .rgb-effect {
+            text-align: center;
+            color: #478ac9;
+        }
     </style>
 </head>
 <body>
@@ -60,74 +77,70 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search for a user...">
         </div>
-        <div id="user-list" class="user-list">
-            <ul>
-                <!-- List items here -->
-                <li>larp</li>
-                <li>blooodpool1234</li>
-                <li>112</li>
-                <li>krampus</li>
-                <li>ogpandabar</li>
-                <li>g59 bandit</li>
-                <li>ragequill</li>
-                <li>karz</li>
-                <li>legion</li>
-                <li>˗ˏˋhomicide?ˎˊ˗</li>
-                <li>Sucide</li>
-                <li>gore</li>
-                <li>octoscared</li>
-                <li>sixshooter</li>
-                <li>slowly decaying</li>
-                <li>banned society</li>
-                <li>Sextron</li>
-                <li>Solo aka jarad?</li>
-                <li>iogrezzz</li>
-                <li>Rize</li>
-                <li>qg</li>
-                <li>StaticK</li>
-                <li>meth</li>
-                <li>TuKa</li>
-                <li>LazyK</li>
-                <li>¿HarmlessIII?</li>
-                <li>Bogi</li>
-                <li>Lucifer</li>
-                <li>ScriptKittie</li>
-                <li>ReaperJr</li>
-                <li>MR PURPLE</li>
-                <li>Lucio</li>
-                <li>Gigi</li>
-                <li>NoDeath</li>
-                <li>AgarHeroYT</li>
-                <li>Liquid</li>
-                <li>reaper</li>
-                <li>¿ヅŴØŁ₣427ヅ?</li>
-                <li>Chillz</li>
-                <li>Dutboot</li>
-                <li>Spanzer</li>
-                <li>RoseHvH</li>
-                <li>Winded</li>
-                <li>notkenny from csgo</li>
-                <li>Not2mp4</li>
-                <li>ク壱ヹ</li>
-                <li>ghvt</li>
-                <li>Sooey</li>
-                <li>NotAkuma</li>
-                <li>Temmie</li>
-                <li>Galaxer</li>
-                <li>saint?</li>
-                <li>ク壱ヹ</li>
-                <li>112ッ</li>
-                <li>✞Ｓｍｏｋｉｎｇ✞</li>
-                <li>moon</li>
-                <li>reapersplitz</li>
-                <li>BIG DAY</li>
-                <li>swatterz</li>
-                <li>mr. cross</li>
-                <li>Cͨhͪoͦoͦgeͤrͬ</li>
-                <li>Rumple</li>
-                <li>Credits: salute, Vamp</li>
-            </ul>
-        </div>
+        <ul id="user-list" class="user-list">
+            <li>larp</li>
+            <li>blooodpool1234</li>
+            <li>112</li>
+            <li>krampus</li>
+            <li>ogpandabar</li>
+            <li>g59 bandit</li>
+            <li>ragequill</li>
+            <li>karz</li>
+            <li>legion</li>
+            <li>˗ˏˋhomicide?ˎˊ˗</li>
+            <li>Sucide</li>
+            <li>gore</li>
+            <li>octoscared</li>
+            <li>sixshooter</li>
+            <li>slowly decaying</li>
+            <li>banned society</li>
+            <li>Sextron</li>
+            <li>Solo aka jarad?</li>
+            <li>iogrezzz</li>
+            <li>Rize</li>
+            <li>qg</li>
+            <li>StaticK</li>
+            <li>meth</li>
+            <li>TuKa</li>
+            <li>LazyK</li>
+            <li>¿HarmlessIII?</li>
+            <li>Bogi</li>
+            <li>Lucifer</li>
+            <li>ScriptKittie</li>
+            <li>ReaperJr</li>
+            <li>MR PURPLE</li>
+            <li>Lucio</li>
+            <li>Gigi</li>
+            <li>NoDeath</li>
+            <li>AgarHeroYT</li>
+            <li>Liquid</li>
+            <li>reaper</li>
+            <li>¿ヅŴØŁ₣427ヅ?</li>
+            <li>Dutboot</li>
+            <li>Spanzer</li>
+            <li>RoseHvH</li>
+            <li>Winded</li>
+            <li>notkenny from csgo</li>
+            <li>Not2mp4</li>
+            <li>ク壱ヹ</li>
+            <li>ghvt</li>
+            <li>Sooey</li>
+            <li>NotAkuma</li>
+            <li>Temmie</li>
+            <li>Galaxer</li>
+            <li>saint?</li>
+            <li>ク壱ヹ</li>
+            <li>112ッ</li>
+            <li>✞Ｓｍｏｋｉｎｇ✞</li>
+            <li>moon</li>
+            <li>reapersplitz</li>
+            <li>BIG DAY</li>
+            <li>swatterz</li>
+            <li>mr. cross</li>
+            <li>Cͨhͪoͦoͦgeͤrͬ</li>
+            <li>Rumple</li>
+            <li>Credits: salute, Vamp</li>
+        </ul>
     </div>
     <div class="dev-tag">.gg/skeetvrc</div>
 
