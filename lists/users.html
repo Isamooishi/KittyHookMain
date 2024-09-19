@@ -19,38 +19,31 @@
         .container {
             padding: 20px;
         }
-
         .search-container {
             margin-bottom: 20px;
         }
-
         .search-container input[type="text"] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-
         .user-list {
             list-style-type: none;
             padding: 0;
         }
-
         .user-list li {
             padding: 8px;
             border-bottom: 1px solid #ddd;
         }
-
         .user-list li:last-child {
             border-bottom: none;
         }
-
         .dev-tag {
             text-align: center;
             padding: 10px;
             background-color: #f4f4f4;
         }
-
         .rgb-effect {
             color: #ff00ff; /* Example color for the RGB effect */
             text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
@@ -73,7 +66,7 @@
 
         <!-- Search Input -->
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search users...">
+            <input type="text" id="searchInput" placeholder="Search users..." onkeyup="filterUsers()">
         </div>
 
         <!-- User List -->
@@ -211,6 +204,26 @@
     </div>
     
     <div class="dev-tag">.gg/skeetvrc</div>
+
+    <script>
+        function filterUsers() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const userList = document.getElementById('userList');
+            const users = userList.getElementsByTagName('li');
+
+            for (let i = 0; i < users.length; i++) {
+                const user = users[i];
+                const textValue = user.textContent || user.innerText;
+
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+                    user.style.display = ""; // Show the user
+                } else {
+                    user.style.display = "none"; // Hide the user
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
